@@ -1,0 +1,23 @@
+Spring Data JPA Implementation
+
+    SetUp Application Management Project
+    Create Entities
+    Spring Data JPA Annotations
+    Repositories
+        // Old Version
+        CrudRepository - Provides a very basic CRUD operations like Create, Read, Update and Delete.
+                       - Very lightweight Repo. and Suitable for Simple Operations.
+        JpaRepository
+        PagingAndSortingRepository
+
+        There are few modifications and new introduction in the new version of Spring Data.
+        Issues -
+            While doing get operations from CrudRepo. when we did findAll it return us the iterable but that is not something which we want list, So we had to convert that iterable into a list and then return So thi is a Problem. i.e Much Code written.
+
+        So That's why this New Repo is coming to overcome this issues - it directly return the list.
+        New Repository
+            ListCrudRepository
+            ListPagingAndSortingRepository
+    Inbuilt method for CRUD
+    Query Methods
+    @Query Annotations
